@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "code": "P0004",
+  "id": "tool-control-center",
+  "aliases": ["P0004", "Tool Control Center"],
+  "name": "Tool Control Center",
+  "type": "Desktop",
+  "owner": "Tool",
+  "status": "Schedule",
+  "summary": "Early web control plane scaffold for managing in-progress tools, webapps, and extensions.",
+  "stack": ["React", "TypeScript", "Vite"],
+  "commands": {
+    "dev": "corepack pnpm dev",
+    "build": "corepack pnpm build",
+    "lint": "corepack pnpm lint"
+  },
+  "docs": {
+    "readme": "README.md"
+  },
+  "github": {
+    "repo": "tuanhoangfx/Tool-Control-Center",
+    "branch": "main",
+    "manifestPath": "tool.manifest.json"
+  },
+  "release": {
+    "version": "0.0.0",
+    "readiness": ["build", "docs"]
+  },
+  "health": {
+    "status": "Schedule",
+    "note": "Superseded by Unified Tool Admin unless revived as a separate control-plane experiment."
+  },
+  "nextActions": [
+    "Decide whether to archive this scaffold or merge useful parts into Unified Tool Admin.",
+    "Add PROJECT_CONTEXT.md and CHANGELOG.md if active development continues."
+  ]
+}

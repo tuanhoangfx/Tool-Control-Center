@@ -1,0 +1,217 @@
+.app-shell {
+  display: grid;
+  grid-template-columns: 60px minmax(0, 1fr);
+  min-height: 100vh;
+  gap: 10px;
+  padding: 10px;
+}
+
+.sidebar {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 8px;
+}
+
+.icon-nav {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface-3);
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.icon-nav.active {
+  color: #ffffff;
+  background: linear-gradient(180deg, var(--accent-2), var(--accent));
+  border-color: color-mix(in srgb, var(--accent) 80%, #ffffff);
+}
+
+.workspace {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 760;
+}
+
+p {
+  margin: 0;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.metric {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+}
+
+.metric strong {
+  font-size: 22px;
+}
+
+.sync-text {
+  font-size: 14px;
+}
+
+.projects-panel {
+  padding: 12px;
+  min-width: 0;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.panel-header input {
+  width: 280px;
+}
+
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.project-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 36px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: left;
+  color: var(--muted);
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+  padding: 0 10px;
+}
+
+.project-table tbody td {
+  height: 50px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border-soft);
+  padding: 0 10px;
+  vertical-align: middle;
+}
+
+.project-table tbody tr {
+  cursor: pointer;
+}
+
+.project-table tbody tr:hover {
+  background: color-mix(in srgb, var(--surface-3) 70%, var(--surface));
+}
+
+.row-active {
+  background: var(--selected-soft);
+}
+
+.empty-row {
+  text-align: center;
+  padding: 14px 10px !important;
+  height: 60px !important;
+}
+
+.mono-cell {
+  font-family: "Cascadia Mono", Consolas, monospace;
+  font-size: 11px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: minmax(520px, 1.2fr) minmax(420px, 1fr);
+  gap: 10px;
+  min-width: 0;
+}
+
+.detail-panel {
+  padding: 12px;
+  min-width: 0;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr);
+  gap: 8px 10px;
+  align-items: start;
+}
+
+.feature-list {
+  margin: 0;
+  padding-left: 16px;
+  display: grid;
+  gap: 6px;
+}
+
+.feature-list li {
+  font-size: 12px;
+  color: var(--text);
+}
+
+.console-box {
+  background: var(--terminal);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.console-box pre {
+  margin: 6px 0 0;
+  max-height: 220px;
+  overflow: auto;
+  white-space: pre-wrap;
+  font-family: "Cascadia Mono", Consolas, monospace;
+  font-size: 11px;
+  color: #b9ffcc;
+}
+
+@media (max-width: 1100px) {
+  .overview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-header {
+    flex-wrap: wrap;
+  }
+
+  .panel-header input {
+    width: 100%;
+  }
+}
